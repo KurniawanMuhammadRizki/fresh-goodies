@@ -13,6 +13,12 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        "card-product-color": "#F9F8F6",
+      },
+      fontFamily: {
+        "SF-Pro-Display": ["SF Pro Display", "sans-serif"],
+      },
     },
   },
   plugins: [],
