@@ -5,7 +5,7 @@ import LongBtn from "./longBtn";
 
 const CartDesktop: React.FC = () => {
   return (
-    <div>
+    <div className="">
       <CartIndicatorDesktop />
       <div className="overflow-auto h-[550px]">
         <CartItemDesktop />
@@ -14,7 +14,7 @@ const CartDesktop: React.FC = () => {
         <CartItemDesktop />
         <CartItemDesktop />
       </div>
-      <div className="mt-[58px]">
+      <div className="mt-[58px] px-4">
         <LongBtn title="Check Out" resultNumber={25.3} />
       </div>
     </div>

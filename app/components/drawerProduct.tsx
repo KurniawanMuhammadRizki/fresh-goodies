@@ -34,7 +34,7 @@ const DrawerProduct: React.FC<DrawerProductProps> = ({
       <DrawerTrigger>
         <div className="flex justify-center items-center">
           <Image
-            className="mix-blend-multiply"
+            className="mix-blend-multiply w-full aspect-square"
             src={src}
             alt={alt}
             height={113}
