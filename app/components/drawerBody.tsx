@@ -2,7 +2,9 @@ import { Metadata } from "@/types/product";
 import { Heart, Minus, Plus } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import Cart from "./cart";
 import DrawerBodyDescItem from "./drawerBodyDescItem";
+import LongBtn from "./longBtn";
 
 interface DrawerBodyProps {
   src: string;
@@ -33,27 +35,28 @@ const DrawerBody: React.FC<DrawerBodyProps> = ({
         <DrawerBodyDescItem title={metaData.carbs} desc={"carbs"} />
       </div>
       <div className="flex w-full justify-between items-center mb-4">
-        <div className="grid grid-cols-3 border-[1px] bg-card-product-color  p-2 w-[80%] rounded-full">
-          <div>
-            <Minus />
+        <div className="border-[1px] bg-card-product-color p-2 mr-2 w-[90%] rounded-full grid grid-cols-5 justify-items-center">
+          <div className="flex justify-center items-center col-span-1">
+            <Minus className="w-8 h-8" />
           </div>
-          <div>2</div>
-          <div>
-            <Plus />
+          <div className="col-span-3 flex justify-center items-center">
+            <div className="w-24 text-center">2</div>
+          </div>
+          <div className="flex justify-center items-center col-span-1">
+            <Plus className="w-8 h-8" />
           </div>
         </div>
 
         <div className="flex justify-between items-center">
-          <div className="border-[1px] rounded-full p-2 bg-card-product-color flex justify-center items-center ">
+          <div className="border-[1px] rounded-full p-4 bg-card-product-color flex justify-center items-center ">
             <div>
               <Heart className="w-4 h-4" />
             </div>
           </div>
         </div>
       </div>
-
-      <div className="w-full bg-black rounded-xl ">
-        <div className="text-white">To Cart</div>
+      <div className="pr-4">
+        <LongBtn title="To Cart" resultNumber={27.3} />
       </div>
     </div>
   );
